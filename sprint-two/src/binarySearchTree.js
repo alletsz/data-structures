@@ -66,12 +66,12 @@ treeMethods.depthFirstLog = function (callback) {
   //   return callback(this.value);
   // }
   callback(this.value);
-  if (this.left !== null) {
-    this.depthFirstLog(callback);
+  if (this.left) {
+    this.left.depthFirstLog(callback);
   }  
 
-  if (this.right !== null) {
-    this.depthFirstLog(callback);
+  if (this.right) {
+    this.right.depthFirstLog(callback);
   } 
  
 };
